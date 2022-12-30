@@ -1,0 +1,40 @@
+<!--whatIDo by jero98772-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>What i do algorithm</title>
+</head>
+<body>
+	<h3><!--Menu bar-->	
+		<center>
+			<table style=" width: 100%;">
+				<th colspan="10">	<h1>What i do algorithm</h1></th>
+				<th colspan="10"><a href="/">What i do algorithm</a></th>
+				<th colspan="10"><a href="/playground">Playground</th>
+				<th colspan="10"><a href="/playonline">Online testing</a></th>
+			</table>
+		</center>
+	</h3>
+	<hr>
+	<h2>All materials</h2>
+	<form>
+		
+	<textarea class="form-control" placeholder="material-objet i can make 1,objet i can make 2,objet i can make 3...
+Wood-Garden,Chair
+Dirt-Garden
+Chair-
+Garden-" rows="5" name="allmaterials"></textarea>
+	<h2>The materials I have (separated by ",")</h2>
+	<input type="text" class="form-control" placeholder="material 1 ,material 2 ...example:Wood,Dirt" name="mymaterials">
+	<br>
+	<input type="submit" name="" value="submit">
+	</form>
+	<h2>
+	Answer:
+	<p>{{ .Text }}</p>
+	</h2>
+</body>
+</html>

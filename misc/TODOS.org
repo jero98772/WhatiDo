@@ -1,0 +1,3 @@
+* Todos
+** list adyacende algoritm
+** add data to csv
