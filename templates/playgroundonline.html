@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title></title>
+	<title>What i do algorithm</title>
 </head>
-<body>	
+<body>
 	<h3><!--Menu bar-->	
 		<center>
 			<table style=" width: 100%;">
@@ -18,12 +18,23 @@
 			</table>
 		</center>
 	</h3>
-
-	<h1>What i do algorithm</h1>
-	<p>Hello </p>
-	What i do is an algorithm is for chose a final product with the materials given by input, the algoritm represent materials as graph
-	<h2>How it works?</h2>
-	this algorim work on directional graph
-
+	<hr>
+	<h2>All materials preloadead</h2>
+	<form>
+		
+	<textarea class="form-control" placeholder="material-objet i can make 1,objet i can make 2,objet i can make 3...
+Wood-Garden,Chair
+Dirt-Garden
+Chair-
+Garden-" rows="5" name="allmaterials" value="{{ .Graph }}">{{ .Graph }}</textarea>
+	<h2>The materials I have (separated by ",")</h2>
+	<input type="text" class="form-control" placeholder="material 1 ,material 2 ...example:Wood,Dirt" name="mymaterials">
+	<br>
+	<input type="submit" name="" value="submit">
+	</form>
+	<h2>
+	Answer:
+	<p>{{ .Text }}</p>
+	</h2>
 </body>
 </html>

@@ -73,6 +73,3 @@ func Str2arrstr(text string ,sep string)[]string{
 	fmt.Println(words)
 	return words
 }
-func PrintHello() {
-	fmt.Println("Hello, Modules! This is mypackage speaking!")
-}

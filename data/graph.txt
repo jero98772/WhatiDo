@@ -1,0 +1,2 @@
+tierra-huerta,casa
+madera-huerta,silla,casa
