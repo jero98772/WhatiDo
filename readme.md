@@ -12,7 +12,7 @@ What i do is an algorithm is for chose a final product with the materials given 
 ### Why is directional graph?
 
 because we can make a house with concret and bricks but you don´t can make brick and concret with a house  
-
+![graph](https://raw.githubusercontent.com/jero98772/WhatiDo/main/misc/screenshots/graph.png)
 ### Nodes
 
 are materials and direccional
@@ -23,7 +23,7 @@ are the things you can make
 
 ### programing notes
 
-i use adyacent list to representate the graph because is more eficent than, but you can use matrix the algoritm work very simililar in a matrix (see <a href="">algoritm with matrix</a>)
+i use adyacent list to representate the graph because is more eficent than, but you can use matrix the algoritm work very simililar in a matrix (see <a href="https://github.com/jero98772/WhatiDo/blob/main/misc/scripts/algotirmwhaticando.go">algoritm with matrix</a>)
 
 ### How it works for select a product?
 
