@@ -1,2 +1,11 @@
-tierra-huerta,casa
-madera-huerta,silla,casa
+land-vegetable garden,house
+concret-house
+wood-house,chair,house
+glass-house,fishtank
+tiles-house
+nails-chair,house
+screws-house,chair
+paint-chair,house
+
+
+

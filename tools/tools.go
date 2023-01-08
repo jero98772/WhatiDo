@@ -5,8 +5,8 @@ type choice struct{
 	thechoice string
 }
 func Str2Graph(text string) map[string][]string{
-	fmt.Println("tool")
-	fmt.Println(text)
+	//fmt.Println("tool")
+	//fmt.Println(text)
 	graph:=make(map[string][]string)
 	token:=""
 	key:=""
@@ -53,15 +53,16 @@ func Whaticanmake(graph map[string][]string,objets []string) string {
 			item=i
 		}
 	}
+	fmt.Println(ocurrences)
 	return item
 }
 func Str2arrstr(text string ,sep string)[]string{
 	token:=""
 	words:=make([]string,0)
-	fmt.Println(text)
+	//fmt.Println(text)
 	for _,i:= range text{
 		i:=string(i)
-		fmt.Println(i,token)
+		//fmt.Println(i,token)
 		if i==sep{
 			words=append(words,token)			
 			token=""
@@ -70,6 +71,6 @@ func Str2arrstr(text string ,sep string)[]string{
 		}
 	}
 	words=append(words,token)
-	fmt.Println(words)
+	//fmt.Println(words)
 	return words
 }

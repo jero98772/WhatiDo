@@ -33,7 +33,7 @@ func Playground(rw http.ResponseWriter,r *http.Request){
 		state=true
 	}
 	choice:=Answer{Text:data,isDonde:state,Graph:""}
-	fmt.Println(choice)
+	//fmt.Println(choice)
 	template, _ := template.ParseFiles("templates/playground.html")
 	template.Execute(rw,choice)
 }
@@ -52,10 +52,11 @@ func Playonline(rw http.ResponseWriter,r *http.Request){
 		graph:=tools.Str2Graph(r.Form["allmaterials"][0]+"\n")
 		mymaterials:=tools.Str2arrstr(r.Form["mymaterials"][0],",")
 		data=tools.Whaticanmake(graph,mymaterials)
+		fmt.Println(data)
 		state=true
 	}
 	choice:=Answer{Text:data,isDonde:state,Graph:string(content)}
-	fmt.Println(string(content))
+	//fmt.Println(string(content))
 	template, _ := template.ParseFiles("templates/playgroundonline.html")
 	template.Execute(rw,choice)
 }
