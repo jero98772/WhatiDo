@@ -16,6 +16,31 @@ func Index(rw http.ResponseWriter,r *http.Request){
 	template, _ := template.ParseFiles("templates/index.html")
 	template.Execute(rw,nil)
 }
+func Playgroundpond(rw http.ResponseWriter,r *http.Request){
+	err := r.ParseForm()
+	data:=""
+	state:=false
+	if err != nil {
+		log.Fatal(err)
+	}
+	if len(r.Form)<=0{
+		data=""
+		state=false
+	}else{
+		allmaterials:=r.Form["allmaterials"][0]+"\n"
+		materials:=r.Form["mymaterials"][0]+"\n"
+		graph:=tools.Str2GraphPond(allmaterials)
+		mymaterials:=tools.Formatmymaterials(materials)
+		fmt.Println(graph)
+		//mymaterials:=tools.Str2arrstr(r.Form["mymaterials"][0]+"\n",",")//change this for support materials and unit structs
+		data=tools.Whaticanmakepon(graph,mymaterials)
+		state=true
+	}
+	choice:=Answer{Text:data,isDonde:state,Graph:""}
+	//fmt.Println(choice)
+	template, _ := template.ParseFiles("templates/playgroundponderate.html")
+	template.Execute(rw,choice)
+}
 func Playground(rw http.ResponseWriter,r *http.Request){
 	err := r.ParseForm()
 	data:=""
@@ -62,6 +87,7 @@ func Playonline(rw http.ResponseWriter,r *http.Request){
 }
 func main(){
 	http.HandleFunc("/",Index)
+	http.HandleFunc("/playgroundpond",Playgroundpond)
 	http.HandleFunc("/playground",Playground)
 	http.HandleFunc("/playonline",Playonline)
 	port :="9600"
